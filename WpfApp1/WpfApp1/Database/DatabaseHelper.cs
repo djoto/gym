@@ -12,7 +12,7 @@ namespace WpfApp1.Database
     {
 
         public MySqlConnection connectToDatabase() {
-            string connectionString = "SERVER=localhost;DATABASE=gym;UID=root;PASSWORD=JRfbhjF8MbdTpvzT;";
+            string connectionString = "SERVER=localhost;DATABASE=gym;UID=root;PASSWORD=password;";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
