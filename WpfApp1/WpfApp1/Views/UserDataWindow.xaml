@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.Views.UserDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="User Data Window" Height="450" Width="760">
+    <Grid>
+        <TextBlock x:Name="IdBlock" HorizontalAlignment="Left" Margin="81,51,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="NameSurnameBlock" HorizontalAlignment="Left" Margin="81,92,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="EmailBlock" HorizontalAlignment="Left" Margin="81,134,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="UserTypeBlock" HorizontalAlignment="Left" Margin="81,181,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="MembershipBlock" HorizontalAlignment="Left" Margin="81,225,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="ExpireDateBlock" HorizontalAlignment="Left" Margin="81,273,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="AtGymBlock" HorizontalAlignment="Left" Margin="81,319,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+
+        <TextBlock x:Name="blckTip" HorizontalAlignment="Left" Margin="431,97,0,0" TextWrapping="Wrap" Text="Tip korisnika:" VerticalAlignment="Top" TextAlignment="Right" Width="100" Height="20" FontSize="14" FontWeight="Normal"/>
+        <TextBlock x:Name="blckDuration" HorizontalAlignment="Left" Margin="411,132,0,0" TextWrapping="Wrap" Text="Trajanje članstva:" VerticalAlignment="Top" TextAlignment="Right" Width="120" Height="22" FontSize="14" FontWeight="Normal"/>
+        <TextBlock x:Name="blckPrice" HorizontalAlignment="Left" Margin="451,171,0,0" TextWrapping="Wrap" Text="Cena:" VerticalAlignment="Top" TextAlignment="Right" Width="80" Height="20" FontSize="14" FontWeight="Normal"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="555,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" IsEnabled="False" Height="20"/>
+        <ComboBox x:Name="comboType" HorizontalAlignment="Left" Margin="555,95,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Regularni" IsSelected="True"/>
+            <ComboBoxItem Content="Student"/>
+        </ComboBox>
+        <ComboBox x:Name="comboDuration" HorizontalAlignment="Left" Margin="555,131,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="1 dan"/>
+            <ComboBoxItem Content="7 dana"/>
+            <ComboBoxItem Content="30 dana" IsSelected="True"/>
+            <ComboBoxItem Content="6 meseci"/>
+            <ComboBoxItem Content="1 godina"/>
+        </ComboBox>
+        <Button x:Name="getPriceButton" Content="Izračunaj" HorizontalAlignment="Left" Margin="643,171,0,0" VerticalAlignment="Top" Height="20" Width="60" Click="getPriceButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="491,52,0,0" TextWrapping="Wrap" Text="Ažuriranje članarine" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="UpdateButton" Content="Ažuriraj" HorizontalAlignment="Left" Margin="536,223,0,0" VerticalAlignment="Top" FontSize="14" Click="UpdateButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Obriši korisnika" HorizontalAlignment="Left" Margin="511,343,0,0" VerticalAlignment="Top" FontSize="14" Click="DeleteButton_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="499,307,0,0" TextWrapping="Wrap" Text="Brisanje korisnika:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Podaci o članu" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+    </Grid>
+</Window>

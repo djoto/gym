@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WpfApp1.Views.SearchUsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="580" d:DesignWidth="800">
+    <Grid Background="White">
+        <Button Content="Pretraži" HorizontalAlignment="Center" Margin="0,495,0,0" VerticalAlignment="Top" FontSize="16" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="318,65,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="308,124,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="282,184,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="293,244,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="254,300,0,0" TextWrapping="Wrap" Text="Tip korisnika:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="225,358,0,0" TextWrapping="Wrap" Text="Trajanje članarine:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="233,419,0,0" TextWrapping="Wrap" Text="Trenutno trenira:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Filteri za pretragu" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="IdFilter" HorizontalAlignment="Left" Margin="371,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="14" Height="19"/>
+        <TextBox x:Name="NameFilter" HorizontalAlignment="Left" Margin="370,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" FontSize="14" Height="19"/>
+        <TextBox x:Name="SurnameFilter" HorizontalAlignment="Left" Margin="370,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" FontSize="14" Height="19"/>
+        <TextBox x:Name="EmailFilter" HorizontalAlignment="Left" Margin="371,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="14" Height="19"/>
+        <ComboBox x:Name="UserTypeFilterCombo" HorizontalAlignment="Left" Margin="371,297,0,0" VerticalAlignment="Top" Width="120" FontSize="14">
+            <ComboBoxItem Content="Regularni" FontSize="14"/>
+            <ComboBoxItem Content="Student" FontSize="14"/>
+            <ComboBoxItem Content="Svi" FontSize="14" IsSelected="True"/>
+        </ComboBox>
+        <ComboBox x:Name="DurationFilterCombo" HorizontalAlignment="Left" Margin="370,358,0,0" VerticalAlignment="Top" Width="120" FontSize="14">
+            <ComboBoxItem Content="1 dan" FontSize="14"/>
+            <ComboBoxItem Content="7 dana" FontSize="14"/>
+            <ComboBoxItem Content="30 dana" FontSize="14"/>
+            <ComboBoxItem Content="6 meseci" FontSize="14"/>
+            <ComboBoxItem Content="1 godina" FontSize="14"/>
+            <ComboBoxItem Content="Svi" FontSize="14" IsSelected="True"/>
+        </ComboBox>
+        <ComboBox x:Name="AtGymFilterCombo" HorizontalAlignment="Left" Margin="370,419,0,0" VerticalAlignment="Top" Width="120" FontSize="14">
+            <ComboBoxItem Content="da" FontSize="14"/>
+            <ComboBoxItem Content="ne" FontSize="14"/>
+            <ComboBoxItem Content="Svi" FontSize="14" IsSelected="True"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="42,534,0,0" TextWrapping="Wrap" Text="Napomena: " VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115,534,0,0" TextWrapping="Wrap" Text="Ako ostavite prazne filtere izlistaće se svi članovi!" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>
